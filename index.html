@@ -16,12 +16,33 @@
     <section class="popup">
       <div class="popup__container">
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="popup__form" action="#" method="POST">
+        <form name="submit-form" class="popup__form" action="#" method="POST">
           <input type="text" id="author-name" name="author-name" class="popup__field" placeholder="Жак-Ив Кусто">
           <input type="text" id="profession" name="profession" class="popup__field" placeholder="Исследователь океана">
           <button type="submit" class="popup__submit-button">Сохранить</button>
         </form>
         <button type="button" aria-label="Закрыть" class="popup__close-button"></button>
+      </div>
+    </section>
+
+    <section class="popup">
+      <div class="popup__container">
+        <h2 class="popup__title">Новое место</h2>
+        <form name="submit-form" class="popup__form" action="#" method="POST">
+          <input type="text" id="card-name" name="card-name" class="popup__field" placeholder="Название">
+          <input type="text" id="card-link" name="card-link" class="popup__field " placeholder="Ссылка на картинку">
+          <button type="submit" class="popup__submit-button">Создать</button>
+        </form>
+        <button type="button" aria-label="Закрыть" class="popup__close-button"></button>
+      </div>
+    </section>
+
+    <section class="popup popup_theme_img">
+      <div class="popup__img-container">
+        <figure class="popup__figure">
+          <img src="#" alt="#" class="popup__img">
+          <figcaption class="popup__caption"></figcaption>
+        </figure><button type="button" aria-label="Закрыть" class="popup__close-button"></button>
       </div>
     </section>
 
@@ -38,61 +59,13 @@
             <h1 class="profile__title">Жак-Ив Кусто</h1>
             <p class="profile__subtitle">Исследователь океана</p>
           </div>
-          <button type="button" aria-label="Редактировать профиль" class="profile__edit-button button"></button>
+          <button type="button" aria-label="Редактировать профиль" class="profile__edit-button"></button>
         </div>
-        <button type="button" aria-label="Добавить новое место" class="profile__add-button button"></button>
+        <button type="button" aria-label="Добавить новое место" class="profile__add-button"></button>
       </section>
 
       <section class="cards main__cards">
         <ul class="cards__list">
-
-          <li class="cards__body">
-            <img src="./images/cards/church.png" alt="Церковь" class="cards__img">
-            <div class="cards__footer">
-              <p class="cards__title">Карачаевск</p>
-              <button type="button" aria-label="Лайкнуть" class="cards__like-button button"></button>
-            </div>
-          </li>
-
-          <li class="cards__body">
-            <img src="./images/cards/mountain.png" alt="Церковь" class="cards__img">
-            <div class="cards__footer">
-              <p class="cards__title">Гора Эльбрус</p>
-              <button type="button" aria-label="Лайкнуть" class="cards__like-button button"></button>
-            </div>
-          </li>
-
-          <li class="cards__body">
-            <img src="./images/cards/lonely-mountain.png" alt="Церковь" class="cards__img">
-            <div class="cards__footer">
-              <p class="cards__title">Домбай</p>
-              <button type="button" aria-label="Лайкнуть" class="cards__like-button button"></button>
-            </div>
-          </li>
-
-          <li class="cards__body">
-            <img src="./images/cards/mountain.png" alt="Церковь" class="cards__img">
-            <div class="cards__footer">
-              <p class="cards__title">Гора Эльбрус</p>
-              <button type="button" aria-label="Лайкнуть" class="cards__like-button button"></button>
-            </div>
-          </li>
-
-          <li class="cards__body">
-            <img src="./images/cards/lonely-mountain.png" alt="Церковь" class="cards__img">
-            <div class="cards__footer">
-              <p class="cards__title">Домбай</p>
-              <button type="button" aria-label="Лайкнуть" class="cards__like-button button"></button>
-            </div>
-          </li>
-
-          <li class="cards__body">
-            <img src="./images/cards/church.png" alt="Церковь" class="cards__img">
-            <div class="cards__footer">
-              <p class="cards__title">Карачаево-Черкесия</p>
-              <button type="button" aria-label="Лайкнуть" class="cards__like-button button"></button>
-            </div>
-          </li>
 
         </ul>
       </section>
@@ -105,6 +78,18 @@
 
   </div>
 
+  <template id='card-template'>
+    <li class="cards__body">
+      <button type="button" aria-label="Удалить" class="cards__remove-button"></button>
+      <img src="#" alt="#" class="cards__img">
+      <div class="cards__footer">
+        <p class="cards__title"></p>
+        <button type="button" aria-label="Лайкнуть" class="cards__like-button"></button>
+      </div>
+    </li>
+  </template>
+
+  <script src="./scripts/index.js"></script>
 </body>
 
 </html>
